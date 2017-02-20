@@ -85,6 +85,8 @@ add_filter( 'stylesheet_uri', 'red_starter_minified_css', 10, 2 );
 function red_starter_scripts() {
 	wp_enqueue_style( 'red-starter-style', get_stylesheet_uri() );
 
+	wp_enqueue_script( 'font-awesome-cdn', 'https://use.fontawesome.com/65d9723211.js', array(), '4.7' );
+
 	wp_enqueue_script( 'red-starter-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20130115', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -102,3 +104,27 @@ require get_template_directory() . '/inc/template-tags.php';
  * Custom functions that act independently of the theme templates.
  */
 require get_template_directory() . '/inc/extras.php';
+
+
+function inhabitent_login_logo() { ?>
+    <style type="text/css">
+        #login h1 a, .login h1 a {
+            background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/inhabitent-logo-text-dark.svg);
+            padding-bottom: 20px;
+			background-size: 95%;
+			width: 99%;
+			height: 35px;
+        }
+    </style>
+<?php }
+add_action( 'login_enqueue_scripts', 'inhabitent_login_logo' );
+
+function inhabitent_login_logo_url() {
+    return home_url();
+}
+add_filter( 'login_headerurl', 'inhabitent_login_logo_url' );
+
+function inhabitent_login_logo_url_title() {
+    return 'Inhabitent Camping Supply Co.';
+}
+add_filter( 'login_headertitle', 'inhabitent_login_logo_url_title' );
