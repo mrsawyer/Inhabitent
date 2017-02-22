@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package RED_Starter_Theme
+ * @package Inhabitent Theme
  */
 
 if ( ! function_exists( 'red_starter_setup' ) ) :
@@ -64,6 +64,24 @@ function red_starter_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+	register_sidebar( array(
+		'name' => 'Footer Sidebar 1',
+		'id' => 'footer-sidebar-1',
+		'description' => 'Appears in the footer area',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget' => '</aside>',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+	) );
+	register_sidebar( array(
+		'name' => 'Footer Sidebar 2',
+		'id' => 'footer-sidebar-2',
+		'description' => 'Appears in the footer area',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget' => '</aside>',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+	) );
 }
 add_action( 'widgets_init', 'red_starter_widgets_init' );
 
@@ -104,27 +122,3 @@ require get_template_directory() . '/inc/template-tags.php';
  * Custom functions that act independently of the theme templates.
  */
 require get_template_directory() . '/inc/extras.php';
-
-
-function inhabitent_login_logo() { ?>
-    <style type="text/css">
-        #login h1 a, .login h1 a {
-            background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/inhabitent-logo-text-dark.svg);
-            padding-bottom: 20px;
-			background-size: 95%;
-			width: 99%;
-			height: 35px;
-        }
-    </style>
-<?php }
-add_action( 'login_enqueue_scripts', 'inhabitent_login_logo' );
-
-function inhabitent_login_logo_url() {
-    return home_url();
-}
-add_filter( 'login_headerurl', 'inhabitent_login_logo_url' );
-
-function inhabitent_login_logo_url_title() {
-    return 'Inhabitent Camping Supply Co.';
-}
-add_filter( 'login_headertitle', 'inhabitent_login_logo_url_title' );

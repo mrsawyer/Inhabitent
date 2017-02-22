@@ -1,0 +1,58 @@
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+
+
+.site-header{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    font-family: $font_family-header, serif;
+    text-transform: uppercase;
+    position: fixed;
+    background-color: $color__background-body;
+    z-index: 1;
+    border-bottom: 1px solid $color_brand_border;
+}
+
+.site-branding{
+    flex: 0 0 20%;
+    display: flex;
+    justify-content: flex-end;
+
+    .header-logo{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        img{
+            width: 50px;
+        }
+    }
+}
+
+.main-navigation{
+    flex: 0 0 80%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    .menu-main-menu-container {
+        width: 100%;
+        ul {
+            padding: 0 5%;
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+
+            li{
+                margin: 0 2%;
+            }
+
+        }
+
+    }
+
+    .menu-toggle{
+        color: $color_brand_nav;
+    }
+}

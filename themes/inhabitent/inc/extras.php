@@ -20,3 +20,32 @@ function red_starter_body_classes( $classes ) {
 	return $classes;
 }
 add_filter( 'body_class', 'red_starter_body_classes' );
+
+
+function inhabitent_login_logo() { 
+    echo '<style type="text/css">
+        #login h1 a, .login h1 a {
+            background-image: url('.get_stylesheet_directory_uri().'/images/inhabitent-logo-text-dark.svg);
+            padding-bottom: 20px;
+			background-size: 95%;
+			width: 99%;
+			height: 35px;
+        }
+        #login .button.button-primary {
+            background-color: #248A83;
+            border-color: #248A83;
+        }
+    </style>';
+}
+
+add_action( 'login_enqueue_scripts', 'inhabitent_login_logo' );
+
+function inhabitent_login_logo_url() {
+    return home_url();
+}
+add_filter( 'login_headerurl', 'inhabitent_login_logo_url' );
+
+function inhabitent_login_logo_url_title() {
+    return 'Inhabitent Camping Supply Co.';
+}
+add_filter( 'login_headertitle', 'inhabitent_login_logo_url_title' );

@@ -283,7 +283,8 @@ textarea {
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-  clear: both; }
+  clear: both;
+  font-family: "novecento", sans-serif; }
 
 /* Copy */
 p {
@@ -330,7 +331,9 @@ big {
 html {
   box-sizing: border-box;
   font-size: 16px;
-  font-size: 1rem; }
+  font-size: 1rem;
+  width: 100vw;
+  height: 100vh; }
 
 *,
 *:before,
@@ -341,8 +344,8 @@ html {
 body {
   background: #fff;
   /* Fallback for when there is no custom background color defined. */
-  width: 100vw;
-  height: 100vh; }
+  width: 100%;
+  height: 100%; }
 
 blockquote, q {
   quotes: "" ""; }
@@ -449,16 +452,24 @@ textarea {
   padding-left: 3px;
   width: 100%; }
 
+input[type=checkbox]:checked:before {
+  color: #248A81; }
+
+textarea:focus, input:focus, input[type]:focus, .uneditable-input:focus {
+  border-color: rgba(229, 103, 23, 0.8);
+  box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075) inset, 0 0 8px rgba(229, 103, 23, 0.6);
+  outline: 0 none; }
+
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
 /* Links */
 a {
-  color: royalblue; }
+  color: #248A83; }
   a:visited {
-    color: purple; }
+    color: #248A83; }
   a:hover, a:focus, a:active {
-    color: midnightblue; }
+    color: #2f1339; }
   a:focus {
     outline: thin dotted; }
   a:hover, a:active {
@@ -626,6 +637,54 @@ a {
   clear: both;
   margin: 0 0 1.5rem; }
 
+.site-content {
+  padding-top: 50px;
+  display: -ms-flexbox;
+  display: flex;
+  height: auto; }
+
+.content-area {
+  -ms-flex: 0 0 70%;
+      flex: 0 0 70%; }
+
+.site-main {
+  border-right: 1px solid #a1a1a1;
+  padding-top: 50px; }
+
+.format-standard {
+  padding: 0 50px 0 150px; }
+
+.wp-post-image {
+  width: 100%;
+  height: 100%; }
+
+.entry-header {
+  position: relative;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "novecento", serif; }
+  .entry-header h2 {
+    font-size: 2em; }
+
+.entry-title {
+  position: absolute;
+  padding: 30px;
+  width: 65%;
+  background-color: #248A83;
+  top: 0; }
+  .entry-title a, .entry-title a:visited {
+    color: #fff;
+    text-decoration: none; }
+  .entry-title a:hover {
+    color: #f0e4d1; }
+
+.entry-meta {
+  position: absolute;
+  background-color: #248A83;
+  bottom: 7px;
+  right: 0;
+  padding: 5px 15px; }
+
 /* Asides */
 .blog .format-aside .entry-title,
 .archive .format-aside .entry-title {
@@ -705,11 +764,128 @@ object {
 /*--------------------------------------------------------------
 # Page Templates
 --------------------------------------------------------------*/
-/* Front page */
+/* Front Page */
+.latest-journal {
+  display: -ms-flexbox;
+  display: flex; }
+  .latest-journal .recent-journal-entry {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column; }
+    .latest-journal .recent-journal-entry .front-page-thumbnail {
+      width: 50%; }
+
+/* Sidebar */
+.widget-area {
+  -ms-flex: 0 0 30%;
+      flex: 0 0 30%; }
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+.site-header {
+  width: 100%;
+  height: 50px;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: "novecento", serif;
+  text-transform: uppercase;
+  position: fixed;
+  background-color: #fff;
+  z-index: 1;
+  border-bottom: 1px solid #a1a1a1; }
+
+.site-branding {
+  -ms-flex: 0 0 20%;
+      flex: 0 0 20%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: end;
+      justify-content: flex-end; }
+  .site-branding .header-logo {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: end;
+        justify-content: flex-end;
+    -ms-flex-align: center;
+        align-items: center; }
+    .site-branding .header-logo img {
+      width: 50px; }
+
+.main-navigation {
+  -ms-flex: 0 0 80%;
+      flex: 0 0 80%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+  -ms-flex-align: center;
+      align-items: center; }
+  .main-navigation .menu-main-menu-container {
+    width: 100%; }
+    .main-navigation .menu-main-menu-container ul {
+      padding: 0 5%;
+      width: 100%;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: end;
+          justify-content: flex-end; }
+      .main-navigation .menu-main-menu-container ul li {
+        margin: 0 2%; }
+  .main-navigation .menu-toggle {
+    color: #248A83; }
+
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
 .site-footer {
   background-image: url("../../images/dark-wood.png");
+  bottom: 0;
   width: 100%;
-  height: 10%; }
+  height: 45%;
+  display: -ms-flexbox;
+  display: flex;
+  color: #ffffff; }
+  .site-footer .site-info {
+    width: 100%;
+    max-width: 1120px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 40px; }
+    .site-footer .site-info .secondary {
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-direction: row;
+          flex-direction: row; }
+      .site-footer .site-info .secondary .footer-sidebar1 {
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%; }
+      .site-footer .site-info .secondary .footer-sidebar2 {
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%; }
+    .site-footer .site-info .footer-logo {
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: end;
+          justify-content: flex-end; }
+      .site-footer .site-info .footer-logo .footer-inhabitent-logo {
+        padding: 10px;
+        width: 70%; }
+        .site-footer .site-info .footer-logo .footer-inhabitent-logo img {
+          width: 70%; }
+    .site-footer .site-info .credit {
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+      margin: 0 auto;
+      text-transform: uppercase;
+      font-family: "novecento", sans-serif;
+      text-align: center;
+      -ms-flex-item-align: end;
+          align-self: flex-end; }

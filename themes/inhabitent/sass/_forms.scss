@@ -60,3 +60,13 @@ textarea {
 	padding-left: 3px;
 	width: 100%;
 }
+
+input[type=checkbox]:checked:before {
+    color: #248A81;
+}
+
+textarea:focus, input:focus, input[type]:focus, .uneditable-input:focus {   
+    border-color: rgba(229, 103, 23, 0.8);
+    box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075) inset, 0 0 8px rgba(229, 103, 23, 0.6);
+    outline: 0 none;
+}

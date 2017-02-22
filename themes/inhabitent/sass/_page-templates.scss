@@ -2,4 +2,28 @@
 # Page Templates
 --------------------------------------------------------------*/
 
-/* Front page */
+
+/* Front Page */
+
+.latest-journal{
+    display: flex;
+
+    .recent-journal-entry{
+        display: flex;
+        flex-direction: column;
+        .front-page-thumbnail{
+            width: 50%;
+        }
+    }
+}
+
+
+
+
+/* Sidebar */
+
+
+.widget-area{
+    flex: 0 0 30%;
+}
+
