@@ -10,7 +10,7 @@
 			</div><!-- #content -->
 
 			<footer id="colophon" class="site-footer" role="contentinfo">
-				<div class="site-info">
+				<div class="site-info site-container">
 					<div id="footer-sidebar" class="secondary">
 						<div id="footer-sidebar1" class="footer-sidebar1">
 							<?php

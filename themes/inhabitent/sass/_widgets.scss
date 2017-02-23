@@ -15,3 +15,28 @@
 .widget_search .search-submit {
 	display: none;
 }
+
+
+/* Contact Us widget */
+
+.contact-info {
+	display: flex;
+	flex-direction: row;
+
+	.contact-info-title {
+		height: auto;
+		min-width: 40px;
+		align-self: center;
+	}
+
+	.contact-info-details{
+		margin: 0;
+	}
+}
+
+
+
+/* Business Hours widget */
+.day-of-week{
+	font-weight: bold;
+}
