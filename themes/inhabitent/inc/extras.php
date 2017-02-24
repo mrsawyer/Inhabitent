@@ -89,7 +89,7 @@ add_action( 'wp_enqueue_scripts', 'inhabitent_about_styles' );
 					
 function modify_shop_archive_title( $title ) {	
     if(is_post_type_archive('products')){
-        $title = "Shop";
+        $title = "Shop Stuff";
     }
     return $title;
 }

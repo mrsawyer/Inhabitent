@@ -34,7 +34,7 @@
     align-items: center;
 
     .menu-main-menu-container {
-        width: 100%;
+        width: 75%;
         ul {
             padding: 0 2px;
             width: 100%;
@@ -53,3 +53,50 @@
         color: $color_brand_nav;
     }
 }
+
+
+/*-----Search Form-----*/
+
+.search-form{
+    display: inline-block;
+    .search-form-fieldset{
+        border: 0;
+        padding: 0;
+        .search-submit{
+            box-shadow: none;
+            border: 0;
+            text-shadow: none;
+            padding: 0;
+            background: none;
+
+            color: $color_brand_nav;
+            i {
+                font-size: $font_size-main;
+            }
+        }
+        input[type=search] {
+            border: 0;
+        }
+    }
+}
+
+.search-field{
+    transition: width 0.5s;
+    width: 0px;
+    font-family: $font_family-header;
+}
+
+
+.search-field-open {
+    transition: width 0.5s;
+    width: 170px;
+}
+
+button:focus{
+    outline: none;
+}
+
+input[type=search]:focus{
+    box-shadow: none;
+}
+

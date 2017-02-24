@@ -16,27 +16,30 @@ get_header(); ?>
 
             ?>
 
-			<header class="page-header">
+			<header class="shop-page-header">
 
-				<h1 class="page-title"> <?php echo $term -> name; ?> </h1>
+				<h1 class="shop-page-title"> <?php echo $term -> name; ?> </h1>
                 <?php
 				the_archive_description( '<div class="taxonomy-description">', '</div>' );
 				?>
 			</header><!-- .page-header -->
 
-			<?php /* Start the Loop */ ?>
+			<section class ="product-archive-section">
 			<?php while ( have_posts() ) : the_post(); ?>
-
+			<div class="product-list-entry">
 				<header class="entry-header">
 					<?php if ( has_post_thumbnail() ) : ?>
-						<?php the_post_thumbnail( 'medium' ); ?>
+						<a href="<?php echo get_permalink() ?>" rel="bookmark"> <?php the_post_thumbnail( 'large' ); ?></a>
 					<?php endif; ?>
 				</header>
 
-				<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-
-
+				<p class = "product-name-price">
+					<span class='entry-title'><?php echo the_title(); ?></span>
+					<span class='entry-price'><?php echo get_post_meta(get_the_ID(), 'price', true); ?></span>
+				</p>
+			</div>
 			<?php endwhile; ?>
+			</section>
 
 			<?php the_posts_navigation(); ?>
 
@@ -51,3 +54,4 @@ get_header(); ?>
 
 
 <?php get_footer(); ?>
+
