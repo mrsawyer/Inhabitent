@@ -22,7 +22,7 @@ get_header();
         <div class="recent-journal-entry">
             <img src="<?php echo get_template_directory_uri(); ?>/images/icons/<?php echo $term->slug ?>.svg" />
             <p class = "front-type-description"><?php echo $term->description ?></p>
-            <button><a href="<?php echo get_permalink();?>" class="front-type-name"><?php echo $term->name ?></a></button>
+            <button><a href="<?php echo get_term_link( $term->slug, 'product_type' );?>" class="front-type-name"><?php echo $term->name ?></a></button>
         </div>
     <?php endforeach; wp_reset_postdata(); ?>
 

@@ -675,7 +675,7 @@ a {
       flex: 0 0 70%; }
 
 .site-main {
-  border-right: 1px solid #a1a1a1;
+  border-right: 1px solid #e1e1e1;
   padding-top: 50px; }
 
 .format-standard {
@@ -693,19 +693,19 @@ a {
   .entry-header h2 {
     font-size: 2em; }
 
-.entry-title {
+.post .entry-title {
   position: absolute;
   padding: 30px;
   width: 65%;
   background-color: #248A83;
   top: 0; }
-  .entry-title a, .entry-title a:visited {
+  .post .entry-title a, .post .entry-title a:visited {
     color: #fff;
     text-decoration: none; }
-  .entry-title a:hover {
+  .post .entry-title a:hover {
     color: #f0e4d1; }
 
-.entry-meta {
+.post .entry-meta {
   position: absolute;
   background-color: #248A83;
   bottom: 7px;
@@ -803,7 +803,7 @@ object {
     display: flex;
     -ms-flex-direction: column;
         flex-direction: column;
-    border: 1px solid #a1a1a1;
+    border: 1px solid #e1e1e1;
     margin: 0 10px; }
     .latest-journal .recent-journal-entry .front-recent-thumbnail {
       width: 100%;
@@ -833,6 +833,41 @@ object {
   height: 100vh;
   top: 0; }
 
+.product-archive-section {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+  .product-archive-section .product-list-entry {
+    -ms-flex: 0 0 25%;
+        flex: 0 0 25%;
+    padding: 15px; }
+    .product-archive-section .product-list-entry .entry-header {
+      height: 240px;
+      border: 1px solid #e1e1e1; }
+      .product-archive-section .product-list-entry .entry-header img {
+        object-fit: cover; }
+    .product-archive-section .product-list-entry .product-name-price {
+      color: black;
+      border: 1px solid #e1e1e1;
+      margin: 0;
+      padding: 10px 20px;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-direction: row;
+          flex-direction: row;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+      .product-archive-section .product-list-entry .product-name-price .entry-title {
+        margin: 0; }
+      .product-archive-section .product-list-entry .product-name-price .entry-price {
+        margin: 0; }
+
+p.product-name-price span:first-child:after {
+  content: leader(dotted); }
+
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
@@ -844,7 +879,7 @@ object {
   position: fixed;
   background-color: rgba(255, 255, 255, 0.85);
   z-index: 1;
-  border-bottom: 1px solid #a1a1a1; }
+  border-bottom: 1px solid #e1e1e1; }
 
 .site-branding {
   -ms-flex: 0 0 20%;
