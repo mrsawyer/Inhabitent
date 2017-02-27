@@ -163,4 +163,45 @@ add_filter( 'get_the_excerpt', 'red_wp_trim_excerpt' );
 
 
 
+/**
+ * Custom adventures page styles method
+ *
+ * 
+ */
+
+function inhabitent_adventures_styles() {
+
+    if(!('adventures' == get_post_type())){
+        return;
+    }
+	$image = CFS()->get( 'adventure_header_image' );
+
+    if(!$image){
+        return;
+    }
+
+    $hero_css = ".adventures-template-default .entry-header {
+        background:
+            linear-gradient( to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.4) 100% ),
+            url({$image}) no-repeat center bottom;
+        background-size: cover, cover;
+        }"; 
+    wp_add_inline_style( 'red-starter-style', $hero_css );
+}
+add_action( 'wp_enqueue_scripts', 'inhabitent_adventures_styles' );
+
+/**
+ * Custom adventures archive title
+ *
+ */
+					
+function modify_adventures_archive_title( $title ) {	
+    if(is_post_type_archive('adventures')){
+        $title = "Latest Adventures";
+    }
+    return $title;
+}
+add_filter( 'get_the_archive_title', 'modify_adventures_archive_title');
+
+
 

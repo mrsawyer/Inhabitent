@@ -866,25 +866,25 @@ object {
 /*--------------------------------------------------------------
 # Page Templates
 --------------------------------------------------------------*/
-.home .site-header, .page-template-about .site-header {
+.home .site-header, .page-template-about .site-header, .adventures-template-default .site-header {
   background-color: rgba(255, 255, 255, 0);
   border-bottom: none; }
-  .home .site-header .header-logo, .page-template-about .site-header .header-logo {
+  .home .site-header .header-logo, .page-template-about .site-header .header-logo, .adventures-template-default .site-header .header-logo {
     display: -ms-flexbox;
     display: flex;
     height: 100%;
     background: url("../../images/inhabitent-logo-tent-white.svg") no-repeat center;
     background-size: contain;
     width: 55px; }
-  .home .site-header a, .page-template-about .site-header a {
+  .home .site-header a, .page-template-about .site-header a, .adventures-template-default .site-header a {
     color: white; }
-  .home .site-header a:hover, .page-template-about .site-header a:hover {
+  .home .site-header a:hover, .page-template-about .site-header a:hover, .adventures-template-default .site-header a:hover {
     color: #f0e4d1; }
 
-.home .search-submit .fa, .page-template-about .search-submit .fa {
+.home .search-submit .fa, .page-template-about .search-submit .fa, .adventures-template-default .search-submit .fa {
   color: white; }
 
-.home .search-submit .fa:hover, .page-template-about .search-submit .fa:hover {
+.home .search-submit .fa:hover, .page-template-about .search-submit .fa:hover, .adventures-template-default .search-submit .fa:hover {
   color: #f0e4d1; }
 
 .search-page-header {
@@ -1005,6 +1005,120 @@ object {
 
 .recent-product-entry:hover {
   border-color: #d99054; }
+
+.adventures-container {
+  position: relative;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "novecento", serif; }
+  .adventures-container .front-adventure-title {
+    position: absolute;
+    padding: 10px 20px;
+    width: 100%;
+    margin-top: 1.25em;
+    font-size: 2.25em;
+    top: 0; }
+    .adventures-container .front-adventure-title a {
+      color: white;
+      font-family: "merriweather", serif;
+      font-weight: normal;
+      font-style: normal; }
+  .adventures-container .general-button {
+    line-height: 1.25em;
+    position: absolute;
+    padding: 10px 30px;
+    width: 37%;
+    margin-bottom: 1.25em;
+    background: none;
+    border-color: white;
+    font-size: 1.5em;
+    bottom: 200px;
+    left: 60px; }
+    .adventures-container .general-button a {
+      color: white; }
+  .adventures-container .general-button:hover {
+    background: #248A83; }
+
+.latest-adventures {
+  display: block;
+  height: 110vh;
+  margin-bottom: 50px; }
+  .latest-adventures .front-page-subtitle {
+    height: 10%; }
+  .latest-adventures .special-button {
+    background: #248a83;
+    border: none;
+    padding: 10px;
+    width: 20%;
+    margin: 10px;
+    text-align: center; }
+    .latest-adventures .special-button a {
+      text-transform: uppercase;
+      color: white;
+      font-family: "novecento", serif; }
+
+.adventures-container {
+  height: 100%; }
+
+.most-recent-adventures {
+  height: 70%; }
+  .most-recent-adventures .recent-adventures {
+    padding: 10px; }
+  .most-recent-adventures .recent-adventures:first-child {
+    width: 50%;
+    height: 100%;
+    float: left; }
+    .most-recent-adventures .recent-adventures:first-child .general-button {
+      font-size: 1.5em;
+      bottom: 10%;
+      left: 10%; }
+  .most-recent-adventures .recent-adventures:nth-child(2) {
+    width: 50%;
+    height: 50%;
+    float: right;
+    line-height: 1.5em; }
+    .most-recent-adventures .recent-adventures:nth-child(2) .front-adventure-title {
+      margin-top: 0.5em; }
+      .most-recent-adventures .recent-adventures:nth-child(2) .front-adventure-title a {
+        font-size: 1.5rem; }
+    .most-recent-adventures .recent-adventures:nth-child(2) .general-button {
+      font-size: 0.8em;
+      bottom: 10%;
+      left: 10%; }
+  .most-recent-adventures .recent-adventures:nth-child(3) {
+    width: 25%;
+    height: 50%;
+    float: right;
+    bottom: 0;
+    line-height: 1.5em; }
+    .most-recent-adventures .recent-adventures:nth-child(3) .front-adventure-title {
+      margin-top: 0.5em; }
+      .most-recent-adventures .recent-adventures:nth-child(3) .front-adventure-title a {
+        font-size: 1.5rem; }
+    .most-recent-adventures .recent-adventures:nth-child(3) .general-button {
+      font-size: 0.8em;
+      bottom: 3%;
+      left: 18%;
+      width: 55%; }
+  .most-recent-adventures .recent-adventures:last-child {
+    width: 25%;
+    height: 50%;
+    float: right;
+    bottom: 0;
+    line-height: 1.5em; }
+    .most-recent-adventures .recent-adventures:last-child .front-adventure-title {
+      margin-top: 0.5em; }
+      .most-recent-adventures .recent-adventures:last-child .front-adventure-title a {
+        font-size: 1.5rem; }
+    .most-recent-adventures .recent-adventures:last-child .general-button {
+      font-size: 0.8em;
+      bottom: 3%;
+      left: 18%;
+      width: 55%; }
+
+.adventure-header-image {
+  width: 100%;
+  height: 100%; }
 
 /* Sidebar */
 .widget-area {
@@ -1142,6 +1256,52 @@ object {
     box-shadow: none;
     border-radius: 0;
     text-shadow: none; }
+
+/* Adventure Page */
+.adventure-content {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column; }
+  .adventure-content .entry-title {
+    margin: 50px 0 5px 0;
+    text-transform: uppercase;
+    letter-spacing: 2px; }
+  .adventure-content .entry-author {
+    text-transform: uppercase;
+    font-family: "novecento", serif;
+    font-size: 1.2em;
+    margin: 0;
+    letter-spacing: 2px; }
+  .adventure-content p {
+    line-height: 1.75em; }
+  .adventure-content .shop-social-media {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row; }
+
+.adventure-archive-content {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  border-top: 1px dashed #e1e1e1;
+  padding-top: 5%; }
+  .adventure-archive-content .adventures-container {
+    -ms-flex: 0 0 49%;
+        flex: 0 0 49%;
+    margin: 1% 0; }
+  .adventure-archive-content .general-button {
+    width: 40%;
+    bottom: 25%; }
 
 /*--------------------------------------------------------------
 # Header

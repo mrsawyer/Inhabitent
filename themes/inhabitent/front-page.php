@@ -66,6 +66,29 @@ get_header();
         <section class="latest-adventures">
 
             <h1 class="front-page-subtitle">Latest Adventures</h1>
+            <div class="most-recent-adventures">
+
+        <?php
+
+        $args = array(
+            'posts_per_page' => 5,
+            'post_type' => 'adventures',
+        );
+
+        $adventure_posts = get_posts( $args ); // returns an array of posts
+
+            foreach ( $adventure_posts as $post ) : setup_postdata( $post ); ?>
+            <div class="recent-adventures">
+                <div class="adventures-container">
+                <img src="<?php echo CFS()->get( 'adventure_header_image' ) ?>" class="adventure-header-image" />
+                <h2 class = "front-adventure-title"><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></h2>
+                <p class="general-button"><a href="<?php echo get_permalink(); ?>" class="front-read-more-button">Read more</a></p>
+                </div>
+            </div>
+        <?php endforeach; wp_reset_postdata(); ?>
+        
+        </div>
+        <p class="special-button"><a href="<?php echo get_post_type_archive_link( 'adventures' ); ?>">More Adventures</a></p>
             
         </section>
 
