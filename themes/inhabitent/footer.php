@@ -18,6 +18,11 @@
 								dynamic_sidebar('footer-sidebar-1');
 							}
 							?>
+							<p class="footer-social-media">
+								<span><i class="fa fa-facebook-square" aria-hidden="true"></i></span>
+								<span><i class="fa fa-twitter-square" aria-hidden="true"></i></span>
+								<span><i class="fa fa-google-plus-square" aria-hidden="true"></i></span>
+							</p>
 						</div>
 						<div id="footer-sidebar2" class="footer-sidebar2">
 							<?php

@@ -2,7 +2,7 @@
 # Content
 --------------------------------------------------------------*/
 .site-container{
-    max-width:1120px;
+    max-width:$site-width;
     width: 100%;
     margin: 0 auto;
     display: flex;
@@ -41,21 +41,24 @@
 }
 
 .site-content{
-    padding-top: 50px;
     display: flex;
 	height: auto;
 }
 
 .content-area{
-    flex: 0 0 70%;
+    flex: 0 0 68%;
+    padding-top: 50px;
+}
+
+.content-area{
+    border-right: 1px solid $color_brand_border;
 }
 .site-main{
-    border-right: 1px solid $color_brand_border;
     padding-top: 50px;
 }
 
 .format-standard{
-    padding: 0 50px 0 150px;
+    padding: 0 50px 30px 150px;
 }
 
 .wp-post-image{
@@ -76,10 +79,13 @@
 .post{
 
     .entry-title{
+    line-height: 1.25em;
     position: absolute;
-    padding: 30px;
-    width: 65%;
+    padding: 10px 30px;
+    width: 72%;
     background-color: $color_brand_nav;
+    margin-top: 1.25em;
+    font-size:2.25em;
     top: 0;
 
         a, a:visited{
@@ -122,3 +128,59 @@
 	width: 100%;
 	height:100%;
 }
+
+.comments-area{
+    padding: 0 50px 30px 150px;
+}
+
+/* Products Page */
+
+
+.product-content-area{
+    .type-products{
+        display: flex;
+    }
+
+    .entry-header{
+        flex: 0 0 50%;
+        padding: 40px 10px;
+        height: 20%;
+    }
+
+    .entry-content{
+        flex: 0 0 50%;
+        padding: 0 20px;
+        line-height: 4rem;
+
+        p{
+            line-height: 2rem;
+        }
+
+        .shop-social-media{
+            display: flex;
+            flex-direction: row;
+        }
+
+        .entry-title{
+            color: $color_brand_outline;
+            text-transform: uppercase;
+            margin: 0;
+            letter-spacing: 1px;
+        }
+
+        .entry-price{
+            font-family: $font_family-header, serif;
+            font-size: 2rem;
+        }
+        .general-button{
+            line-height: 1.75rem;
+            text-transform: uppercase;
+            font-family: $font_family-header, serif;
+            margin: 5px;
+            i{
+                width: 30%;
+            }
+        }
+    }
+}
+

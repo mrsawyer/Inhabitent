@@ -140,7 +140,7 @@ function red_wp_trim_excerpt( $text ) {
 		$excerpt_length = apply_filters( 'excerpt_length', $excerpt_word_count );
 		
 		// create a custom "more" link
-		$excerpt_end = '<span>[...]</span><p><a href="' . get_permalink() . '" class="read-more">Read more &rarr;</a></p>'; // modify excerpt ending
+		$excerpt_end = '<span>[...]</span><p class="general-button"><a href="' . get_permalink() . '">Read more &rarr;</a></p>'; // modify excerpt ending
 		$excerpt_more = apply_filters( 'excerpt_more', ' ' . $excerpt_end );
 		
 		// add the elipsis and link to the end if the word count is longer than the excerpt
@@ -160,3 +160,7 @@ function red_wp_trim_excerpt( $text ) {
 
 remove_filter( 'get_the_excerpt', 'wp_trim_excerpt' );
 add_filter( 'get_the_excerpt', 'red_wp_trim_excerpt' );
+
+
+
+

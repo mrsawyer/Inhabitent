@@ -13,9 +13,7 @@ get_header(); ?>
 		<?php if ( have_posts() ) : ?>
 
 			<header class="shop-page-header">
-				<?php
-
-					the_archive_title( '<h1 class="shop-page-title">', '</h1>' ); ?>
+				<?php the_archive_title( '<h1 class="shop-page-title">', '</h1>' ); ?>
 					<ul class="product-types">
 
 						<?php 
@@ -27,7 +25,7 @@ get_header(); ?>
 
 						foreach ( $terms as $term ) : ?>
 							<li class="product-term-item">
-								<a href="<?php echo get_term_link( $term->slug, 'product_type' );?>" class="front-type-name"><p> <?php echo $term->name ?></p></a>
+								<a href="<?php echo get_term_link( $term->slug, 'product_type' );?>" class="front-type-name"><p> <?php echo $term->slug ?></p></a>
 							</li>
 						<?php endforeach; wp_reset_postdata(); ?>
 

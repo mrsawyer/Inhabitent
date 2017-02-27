@@ -3,40 +3,189 @@
 --------------------------------------------------------------*/
 
 
+.home, .page-template-about{
+
+    .site-header{
+        background-color: hsla(0,0%,100%,0);
+        border-bottom: none;
+
+        .header-logo{
+        display: flex;
+        height: 100%;
+        background:
+            url("../../images/inhabitent-logo-tent-white.svg") no-repeat center;
+        background-size: contain;
+        width: 55px;
+    }
+        a{
+            color: white;
+        }
+        a:hover{
+            color: $color_brand_link;
+        }
+    }
+    .search-submit .fa {
+            color: white;
+        } 
+    .search-submit .fa:hover {
+            color: $color_brand_link;
+        } 
+}
+
+.search-page-header{
+    border-bottom: 1px solid $color_brand_border; 
+}
+.search-content-area{
+    padding: 50px 50px 0 150px;
+}
+
+
 /* Front Page */
 
-.latest-journal{
+
+.front-page-header{
+    background:
+            linear-gradient( to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.4) 100% ),
+            url("../../images/home-hero.jpg") no-repeat center top;
+    background-size: cover, cover;
+}
+
+.front-page-header-title{
+    background:
+            url("../../images/inhabitent-lgo-full.svg") no-repeat center bottom;
+    background-size: cover, cover;
+
+}
+
+.front-page-sections{
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    width: $site-width;
+}
+
+.entry-content .general-button{
+    width: 20%;
+    padding: 8px;
+}
+
+
+.general-button{
+    margin: 10px;
+    background: white;
+    text-align: center;
+    border: 1px solid black;
+    padding: 5px;
+    width: 37%;
+    a {
+        color: black;
+    }
+}
+.general-button:hover{
+    background: $color_brand_nav;
+    border: none;
+    a {
+        color:white;
+    }
+}
+
+.latest-journal{
+    display: block;
     padding: 20px;
 
-    .recent-journal-entry{
+    .most-recent-journal{
         display: flex;
-        flex-direction: column;
-        border: 1px solid $color_brand_border;
-        margin: 0 10px;
-        .front-recent-thumbnail{
-            width: 100%;
-            height: 62%;
-        }
-        .front-recent-comments, .front-recent-title{
-            padding: 0 5px;
-        }
-        .front-recent-title{
-            h2 .hello{
-                margin: 0;
+        justify-content: space-between;
+        padding: 20px 0;
+
+        .recent-journal-entry{
+            display: flex;
+            flex-direction: column;
+            width: 32%;
+            border: 1px solid $color_brand_border;
+
+            .comments-title{
+                padding: 20px 10px;
+                line-height: 1.75rem;
+                border-top: 5px solid $color_brand_border;
+                height: 40%;
+            }
+            .front-recent-comments{
+                font-size: 0.75rem;
+            }
+
+            .front-recent-thumbnail{
+                width: 100%;
+                height: 53%;
+            }
+            .front-recent-title{
+                .front-page-title{
+                    margin: 0;
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                }
             }
         }
     }
 }
+
+.different-product-types{
+    display: flex;
+    flex-direction: row;
+}
+
+.front-page-subtitle  {
+    font-family: $font_family-header, serif;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.recent-product-entry{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 1px solid $color_brand_border;
+    border-top: 5px solid $color_brand_border;
+    margin: 0 10px;
+    padding: 2% 1%;
+    .special-button{
+        background: $color_brand_nav;
+        border: none;
+        padding: 10px;
+        width: 60%;
+        margin: 0;
+        a {
+            color:white;
+            text-transform: uppercase;
+            font-family: $font_family-header, serif;
+        }
+    }
+
+    .special-button:hover{
+        background: #19605b;
+    }
+    .product-icons{
+        width: 25%;
+    }
+}
+
+.recent-product-entry:hover{
+    border-color: $color_brand_outline;
+}
+
 
 
 /* Sidebar */
 
 
 .widget-area{
-    flex: 0 0 30%;
-    padding-top: 40px;
+    flex: 0 0 32%;
+    padding: 90px 0  0 50px;
 
     .widget-title{
         text-transform: uppercase;
@@ -50,12 +199,14 @@
 
 .shop-page-header{
 
-    margin-top: 5%;
+    font-family: $font_family-header, serif;
+    padding: 3% 0;
 
     .shop-page-title{
         text-align: center;
         text-transform: uppercase;
         margin: 0;
+        letter-spacing: 2px;
     }
 
     .product-types{
@@ -68,35 +219,44 @@
         padding: 0;
 
         .product-term-item{
-            margin: 0 20px;
+            margin: 0 7%;
+            text-transform: uppercase;
+            font-size: 1.25em;
         }
 
     }
 
 }
 
-
 .shop-content-area, .about-content{
-    max-width: 1120px;
+    max-width: $site-width;
     width: 100%;
     margin: 0 auto;
+}
+.shop-content-area{
+    padding-top: 50px;
 }
 
 .custom-header{
     width: 100vw;
     height: 100vh;
-    top:0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .product-archive-section{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 10% 0;
+    justify-content: space-between;
+    border-top: 1px dashed $color_brand_border;
+    padding: 2% 0;
     .product-list-entry {
-        flex: 0 0 25%;
-        width: 25%;
-        padding: 15px;
+        flex: 0 0 23%;
+        width: 23%;
+        padding: 15px 0;
         
         .entry-header{
             height: 240px;
@@ -108,14 +268,15 @@
         .product-name-price{
             color: black;
             border: 1px solid $color_brand_border;
+            border-top: 4px solid $color_brand_border;
             margin: 0;
             padding: 10px 12px;
             display: flex;
             flex-direction: row;
             
             .entry-title {
-                white-space:nowrap;
-                overflow:hidden;
+                white-space: nowrap;
+                overflow: hidden;
             }
             .entry-title:after {
                 content: ' ....................................';
@@ -124,4 +285,69 @@
     }
 }
 
+.taxonomy-description{
+    text-align: center;
+}
 
+/* About */
+
+.about-header-title {
+    color: white;
+    font-size: 3rem;
+}
+
+.about-content{
+    padding: 2% 11%;
+    line-height: 1.75em;
+
+
+    h2 {
+        text-align: center;
+        font-size: 2.25rem;
+        text-transform: uppercase;
+        color: $color_brand_hover;
+    }
+}
+
+
+/* Contact Us */
+
+.type-page{
+    padding: 0 50px 30px 150px;
+
+    iframe {
+        width: 100%;
+        height: 300px;
+    }
+
+    .p3{
+        line-height: 1.75em;
+    }
+
+    h1{
+        text-transform: uppercase;
+        color: $color_brand_hover;
+    }
+
+    label{
+        text-transform: uppercase;
+        font-family: $font_family-header, serif;
+        .contact-star{
+            color: $color_brand_outline;
+        }
+    }
+    .special-button input[type=submit]{
+        background: $color_brand_nav;
+        border: none;
+        padding: 15px;
+        width: 15%;
+        margin: 0;
+        color:white;
+        text-transform: uppercase;
+        font-family: $font_family-header, serif;
+        font-size: 16px;
+        box-shadow: none;
+        border-radius: 0;
+        text-shadow: none;
+    }
+}

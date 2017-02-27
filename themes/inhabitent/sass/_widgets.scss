@@ -4,12 +4,29 @@
 
 .widget {
 	margin: 0 0 $base__space-unit;
+	margin-bottom: 0;
 
 	/* Make sure select elements fit in widgets. */
 	select {
 		max-width: 100%;
 	}
 }
+
+.widget-area{
+	ul{
+		padding: 0;
+		margin:0;
+		list-style-type: none;
+		line-height: 2rem;
+	}
+}
+
+.widget-title{
+    color: $color_brand_outline;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
 
 /* Search widget. */
 .widget_search .search-submit {
@@ -22,10 +39,11 @@
 .contact-info {
 	display: flex;
 	flex-direction: row;
+	padding-bottom: 15px;
 
 	.contact-info-title {
 		height: auto;
-		min-width: 40px;
+		min-width: 30px;
 		align-self: center;
 	}
 
@@ -34,7 +52,21 @@
 	}
 }
 
+.footer-social-media{
+    margin: 0;
+    i{
+        padding: 0 10px;
+    }
+}
 
+.footer-sidebar1 {
+	a{
+		color: white;
+	}
+	a:hover{
+		text-decoration: underline;
+	}
+}
 
 /* Business Hours widget */
 .day-of-week{
