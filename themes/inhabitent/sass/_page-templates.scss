@@ -402,7 +402,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    border-top: 1px dashed $color_brand_border;
+    border-top: 1px dashed #c8c8c8;
     padding: 2% 0;
     .product-list-entry {
         flex: 0 0 23%;
@@ -540,7 +540,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    border-top: 1px dashed $color_brand_border;
+    border-top: 1px dashed #c8c8c8;
     padding-top: 5%;
 
     .adventures-container{
@@ -553,4 +553,19 @@
         bottom: 25%;
     }
 
+}
+
+
+.error-404{
+    padding: 0 50px 30px 150px;
+    ul{
+        list-style-type: none;
+        padding: 0;
+        margin-left: 0;
+    }
+    h2{
+        color: $color_brand_hover;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
 }

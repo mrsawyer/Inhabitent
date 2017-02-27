@@ -1182,7 +1182,7 @@ object {
       flex-wrap: wrap;
   -ms-flex-pack: justify;
       justify-content: space-between;
-  border-top: 1px dashed #e1e1e1;
+  border-top: 1px dashed #c8c8c8;
   padding: 2% 0; }
   .product-archive-section .product-list-entry {
     -ms-flex: 0 0 23%;
@@ -1293,7 +1293,7 @@ object {
       flex-wrap: wrap;
   -ms-flex-pack: justify;
       justify-content: space-between;
-  border-top: 1px dashed #e1e1e1;
+  border-top: 1px dashed #c8c8c8;
   padding-top: 5%; }
   .adventure-archive-content .adventures-container {
     -ms-flex: 0 0 49%;
@@ -1302,6 +1302,17 @@ object {
   .adventure-archive-content .general-button {
     width: 40%;
     bottom: 25%; }
+
+.error-404 {
+  padding: 0 50px 30px 150px; }
+  .error-404 ul {
+    list-style-type: none;
+    padding: 0;
+    margin-left: 0; }
+  .error-404 h2 {
+    color: #2f1339;
+    letter-spacing: 2px;
+    text-transform: uppercase; }
 
 /*--------------------------------------------------------------
 # Header
