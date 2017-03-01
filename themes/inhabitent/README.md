@@ -1,21 +1,11 @@
-# RED Starter
+# Inhabitent Theme
 
-A WordPress starter theme for RED Academy students, forked from Underscores.
+Inhabitent is a wordpress theme created as a custom theme for the Inhabitent online camping supplies store.
 
 ## Installation
 
-### 1. Download me (don't clone me!)
+###1. In your admin panel, go to Appearance > Themes and click the Add New button.
+###2. Click Upload and Choose File, then select the theme's .zip file. Click Install Now.
+###3. Click Activate to use your new Inhabitent theme right away.
 
-Then add me to your `wp-content` directory.
-
-### 2. Rename the `redstarter` directory
-
-Make sure that the theme directory name is project appropriate!
-
-### 3. Install the dev dependencies
-
-Next you'll need to run `npm install` **inside your theme directory** next to install the node modules you'll need for Gulp, etc.
-
-### 4. Update the proxy in `gulpfile.js`
-
-Lastly, be sure to update your `gulpfile.js` with the appropriate URL for the Browsersync proxy (so change `inhabitent.dev` to the appropriate localhost URL).
+##
