@@ -5,7 +5,7 @@
 
 .home, .page-template-about, .adventures-template-default{
 
-    .site-header{
+    .site-header.custom-site-header{
         background-color: hsla(0,0%,100%,0);
         border-bottom: none;
 
@@ -48,13 +48,6 @@
             linear-gradient( to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.4) 100% ),
             url("../../images/home-hero.jpg") no-repeat center top;
     background-size: cover, cover;
-}
-
-.front-page-header-title{
-    background:
-            url("../../images/inhabitent-lgo-full.svg") no-repeat center bottom;
-    background-size: cover, cover;
-
 }
 
 .front-page-sections{

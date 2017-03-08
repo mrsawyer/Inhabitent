@@ -866,19 +866,19 @@ object {
 /*--------------------------------------------------------------
 # Page Templates
 --------------------------------------------------------------*/
-.home .site-header, .page-template-about .site-header, .adventures-template-default .site-header {
+.home .site-header.custom-site-header, .page-template-about .site-header.custom-site-header, .adventures-template-default .site-header.custom-site-header {
   background-color: rgba(255, 255, 255, 0);
   border-bottom: none; }
-  .home .site-header .header-logo, .page-template-about .site-header .header-logo, .adventures-template-default .site-header .header-logo {
+  .home .site-header.custom-site-header .header-logo, .page-template-about .site-header.custom-site-header .header-logo, .adventures-template-default .site-header.custom-site-header .header-logo {
     display: -ms-flexbox;
     display: flex;
     height: 100%;
     background: url("../../images/inhabitent-logo-tent-white.svg") no-repeat center;
     background-size: contain;
     width: 55px; }
-  .home .site-header a, .page-template-about .site-header a, .adventures-template-default .site-header a {
+  .home .site-header.custom-site-header a, .page-template-about .site-header.custom-site-header a, .adventures-template-default .site-header.custom-site-header a {
     color: white; }
-  .home .site-header a:hover, .page-template-about .site-header a:hover, .adventures-template-default .site-header a:hover {
+  .home .site-header.custom-site-header a:hover, .page-template-about .site-header.custom-site-header a:hover, .adventures-template-default .site-header.custom-site-header a:hover {
     color: #f0e4d1; }
 
 .home .search-submit .fa, .page-template-about .search-submit .fa, .adventures-template-default .search-submit .fa {
@@ -896,10 +896,6 @@ object {
 /* Front Page */
 .front-page-header {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%), url("../../images/home-hero.jpg") no-repeat center top;
-  background-size: cover, cover; }
-
-.front-page-header-title {
-  background: url("../../images/inhabitent-lgo-full.svg") no-repeat center bottom;
   background-size: cover, cover; }
 
 .front-page-sections {

@@ -4,7 +4,7 @@
  *
  * @package Inhabitent
  */
-
+ 
 get_header(); ?>
 
 	<div id="primary" class="about-content-area">
