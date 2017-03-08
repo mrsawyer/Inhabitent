@@ -6,12 +6,8 @@
  * Learn more: https://github.com/Automattic/RED Starter Theme/pull/136
  */
 (function ($) {
-
-    console.log('hello')
-
     $('.fa-search').on('click', function(event) {
         event.preventDefault();
         $( ".search-field" ).toggleClass( 'search-field-open');
     })
-
 })(jQuery);

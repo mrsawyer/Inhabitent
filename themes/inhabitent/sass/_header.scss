@@ -4,7 +4,7 @@
 
 
 .site-header{
-    width: 100%;
+    width: 100vw;
     height: 50px;
     font-family: $font_family-header, serif;
     text-transform: uppercase;
@@ -35,7 +35,9 @@
 
     .menu-main-menu-container {
         width: 75%;
-        ul {
+        display: flex;
+        justify-content: flex-end;
+        .menu {
             padding: 0 2px;
             width: 100%;
             display: flex;
@@ -44,13 +46,18 @@
             li{
                 margin: 0 2%;
             }
-
         }
+        .selectric-wrapper { display: none; }
 
+        @media (max-width: 600px) {
+            .menu { display: none; }
+            .selectric-wrapper { display: flex; }
+        }
     }
 
     .menu-toggle{
         color: $color_brand_nav;
+        display: none;
     }
 }
 

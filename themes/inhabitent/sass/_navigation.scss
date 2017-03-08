@@ -34,7 +34,6 @@ a {
 	width: 100%;
 
 	ul {
-		display: none;
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
@@ -63,13 +62,6 @@ a {
 				width: 200px;
 			}
 
-			:hover > a,
-			.focus > a {
-			}
-
-			a:hover,
-			a.focus {
-			}
 		}
 
 		li:hover > ul,
@@ -80,18 +72,9 @@ a {
 	li {
 		float: left;
 		position: relative;
-
-		&:hover > a,
-		&.focus > a {
-		}
 	}
 	a {
 		display: block;
-	}
-
-	.current_page_item > a,
-	.current-menu-item > a,
-	.current_page_ancestor > a {
 	}
 }
 
