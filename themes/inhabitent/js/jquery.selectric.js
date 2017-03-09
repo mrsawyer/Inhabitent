@@ -1,13 +1,4 @@
-/*!
- *         ,/
- *       ,'/
- *     ,' /
- *   ,'  /_____,
- * .'____    ,'
- *      /  ,'
- *     / ,'
- *    /,'
- *   /'
+/*
  *
  * Selectric ϟ v1.11.1 (Jan 10 2017) - http://lcdsantos.github.io/jQuery-Selectric/
  *
@@ -1095,5 +1086,5 @@
       keepMenuOpen: true,
       maxLabelEntries: false
     }
-  };
-}))(jQuery);
+  }
+})(jQuery))

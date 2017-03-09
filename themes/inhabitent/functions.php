@@ -113,7 +113,7 @@ function red_starter_scripts() {
 
 	wp_enqueue_script( 'inhabitent_fixed-header', get_template_directory_uri() . '/build/js/fixed-header.min.js', array( 'jquery' ), false, true );
 
-	wp_enqueue_script( 'selectric', get_template_directory_uri() . '/build/js/jquery.selectric.min.js', array( 'jquery' ), false, true );
+	wp_enqueue_script( 'selectric', get_template_directory_uri() . '/js/jquery.selectric.js', array( 'jquery' ), false, true );
 
 	wp_enqueue_script( 'inhabitent_drop-down-navigation', get_template_directory_uri() . '/build/js/drop-down-navigation.min.js', array( 'jquery', 'selectric' ), false, true );
 
