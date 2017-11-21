@@ -1,6 +1,6 @@
 Inhabitent is a multi-paged, hipster-themed camping supply shop made with PHP and Wordpress as a content management system.
 
-![alt text](/screenshot.png "Inhabitent Home Page")
+![alt text](screenshot.png "Inhabitent Home Page")
 
 
 # Technologies Used
