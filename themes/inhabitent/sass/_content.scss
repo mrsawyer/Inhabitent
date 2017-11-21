@@ -104,6 +104,16 @@
     bottom: 7px;
     right: 0;
     padding: 5px 15px;
+
+        a, a:visited{
+            color: $color_general;
+            text-decoration: none;
+        }
+
+        a:hover{
+            color: $color_brand_link;
+        }
+
 }
 
 }

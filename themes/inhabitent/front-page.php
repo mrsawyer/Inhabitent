@@ -14,7 +14,6 @@ get_header();
     </header><!-- .entry-header -->
     <div class="front-page-sections">
         <section class="product-types">
-
             <h1 class="front-page-subtitle">Shop Stuff</h1>
             <div class="different-product-types">
         <?php

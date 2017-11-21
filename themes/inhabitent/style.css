@@ -743,6 +743,11 @@ a {
   bottom: 7px;
   right: 0;
   padding: 5px 15px; }
+  .post .entry-meta a, .post .entry-meta a:visited {
+    color: #fff;
+    text-decoration: none; }
+  .post .entry-meta a:hover {
+    color: #f0e4d1; }
 
 /* Asides */
 .blog .format-aside .entry-title,

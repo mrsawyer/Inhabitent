@@ -3,7 +3,7 @@
  *
  * Header changes style once scrolled past top
  *
- * 
+ *
  */
 
 (function ($) {
@@ -12,7 +12,6 @@
 
     $(window).on('scroll',function(){
         var pageHeader = $('.custom-header').height()
-        console.log('hello')
         var stop = Math.round($(window).scrollTop());
         if (stop <= pageHeader) {
             $('.site-header').addClass('custom-site-header');
