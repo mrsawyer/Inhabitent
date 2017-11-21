@@ -15,6 +15,7 @@ plugins/*
 # Ignore everything in "themes" except the active theme. #
 themes/*
 !themes/inhabitent/
+!themes/screenshot.png
 
 # Ignore packages #
 themes/inhabitent/node_modules/
